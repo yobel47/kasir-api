@@ -47,6 +47,8 @@ func main() {
 	// Setup routes
 	http.HandleFunc("/api/product", productHandler.HandleProducts)
 	http.HandleFunc("/api/product/", productHandler.HandleProductByID)
+	http.HandleFunc("/api/category", productHandler.HandleProducts)
+	http.HandleFunc("/api/category/", productHandler.HandleProductByID)
 
 	//localhost:8080/health
 	http.HandleFunc("/health", func(w http.ResponseWriter, r *http.Request) {
